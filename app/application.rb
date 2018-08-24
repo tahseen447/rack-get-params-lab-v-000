@@ -20,7 +20,7 @@ class Application
     else
       @@cart.each {|item| resp.write("#{item}\n")}
     end
-  elsif req.path.match(/add?item=/)
+  elsif req.path.match(/add/)
       item = req.params['item']
       resp.write handle_add(item)
     else
