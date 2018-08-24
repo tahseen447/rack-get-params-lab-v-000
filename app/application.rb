@@ -21,7 +21,7 @@ class Application
       @@cart.each {|item| resp.write("#{item}\n")}
     end
     elsif req.path.match(/add/)
-      item = req.params['a']
+      item = req.params['add']
       resp.write handle_add(item)
     else
       resp.write "Path Not Found"
