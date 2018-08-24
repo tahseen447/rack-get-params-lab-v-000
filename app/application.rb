@@ -22,7 +22,7 @@ class Application
     end
     elsif req.path.match(/add/)
       item = req.params['a']
-      handle_add(item)
+      resp.write handle_add(item)
     else
       resp.write "Path Not Found"
     end
